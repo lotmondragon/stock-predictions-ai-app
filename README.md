@@ -1,21 +1,29 @@
-# cob324d5993713c3858c2a700
+# Stock Predictions AI
 
-Quick start:
+Web app that generates natural-language analysis of stock price movements
+by fetching market data and passing it to an LLM for interpretation.
 
-```
-$ npm install
-$ npm start
-````
+Built as the capstone project for Scrimba's "Build AI Apps with ChatGPT,
+DALL·E and GPT-4" certification.
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+## What it does
+- Takes one or more stock tickers as input
+- Fetches historical price data from a market data API
+- Sends the dataset to the OpenAI API with a prompt engineered to produce
+  a concise, readable market report
+- Renders the generated analysis in the UI
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## Stack
+JavaScript · Vite · OpenAI API · Polygon.io API
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## Running locally
+npm install
+npm run dev
 
+Requires an OpenAI API key and a market data API key in a .env file.
+See .env.example.
+
+## Notes
+This was a learning project. The API key handling is client-side, which is
+fine for a local demo but would need a backend proxy in production.
 Happy Coding!
