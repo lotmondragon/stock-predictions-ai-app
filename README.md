@@ -20,10 +20,11 @@ JavaScript · Vite · OpenAI API · Polygon.io API
 npm install
 npm run dev
 
-Requires an OpenAI API key and a market data API key in a .env file.
-See .env.example.
+No API keys are needed locally: both external calls go through Cloudflare
+Workers that hold the OpenAI and Polygon.io keys server-side.
 
 ## Notes
-This was a learning project. The API key handling is client-side, which is
-fine for a local demo but would need a backend proxy in production.
-Happy Coding!
+This was a learning project. API keys never reach the browser: the frontend
+calls two Cloudflare Workers that act as a proxy to OpenAI and Polygon.io.
+A production version would add rate limiting and input validation on the
+Workers.
